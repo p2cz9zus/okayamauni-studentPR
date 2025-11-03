@@ -37,15 +37,15 @@ body {
 }
 
 /*=====================================
-  ヘッダー/ナビゲーション（目次の中央配置）
+  ヘッダー/ナビゲーション（目次の中央配置・縦並び）
 =====================================*/
 .header {
-    width: 900px; /* メインコンテンツの最大幅に合わせる */
+    width: 300px; /* 目次の縦並びに適した幅 */
     padding: 30px 0;
     text-align: center;
-    /* 中央配置に変更 */
-    position: relative; /* absoluteを解除 */
-    top: 0; /* ヒーローセクションの直後 */
+    /* 中央配置 */
+    position: relative; 
+    top: 0; 
     left: auto;
     margin: 0 auto; /* 中央寄せ */
 }
@@ -63,35 +63,34 @@ body {
 .sidebar-nav ol {
     list-style: none;
     padding: 0;
-    /* 横並びにして中央揃え */
-    border-left: none; /* 縦線を削除 */
-    text-align: center;
-    display: flex; 
-    justify-content: center; /* 項目を中央に配置 */
-    margin-left: 0; /* マージンを解除 */
-    gap: 20px; /* 項目間のスペース */
+    /* 縦並びに戻す */
+    text-align: left;
+    border-left: 2px solid #ccc; /* 縦線を再現 */
+    display: block;
+    /* ul要素を中央寄せ */
+    width: fit-content; 
+    margin-left: auto;
+    margin-right: auto;
+    gap: 0; /* 横並びの指定を解除 */
 }
 
 .sidebar-nav li {
-    padding: 5px 15px;
+    padding: 5px 15px; /* 横並びから縦並びに適したパディングに調整 */
     position: relative;
-    border-right: 1px solid #ccc; /* 項目間の区切り線 */
-    white-space: nowrap;
-}
-
-.sidebar-nav li:last-child {
-    border-right: none; /* 最後の項目の区切り線は不要 */
+    border-right: none; /* 横並びの区切り線は不要 */
 }
 
 .nav-number {
-    position: static; /* absoluteを解除し、要素の流れに戻す */
-    margin-right: 5px;
+    position: absolute; /* 縦線に重ねるためabsoluteに戻す */
+    left: -20px; 
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 14px;
     font-weight: bold;
     color: #003366;
-    background-color: transparent; /* 背景色を透明に戻す */
-    padding: 0;
-    transform: none;
+    background-color: #f9f9f9; /* 背景色で縦線を隠す */
+    padding: 0 5px;
+    margin-right: 0;
 }
 
 .sidebar-nav a {
@@ -104,12 +103,11 @@ body {
   メインコンテンツエリア（中央配置）
 =====================================*/
 .content-wrapper {
-    /* 中央配置に変更 */
+    /* 中央配置 */
     margin-left: auto; 
     margin-right: auto;
     padding: 40px 80px;
     max-width: 900px;
-    /* ヒーローセクションの高さ(60vh)を考慮していたpadding-topを解除 */
     padding-top: 40px; 
 }
 
