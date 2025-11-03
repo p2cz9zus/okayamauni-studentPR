@@ -16,8 +16,8 @@ body {
 .hero-section {
     width: 100%;
     height: 60vh; /* ビューポートの高さの60% */
-    /* 【最終修正】リポジトリ名と画像ファイル名をすべて小文字にした絶対パスに修正 */
-    background-image: url('/okayamauni-studentPR/okayamauni.jpg'); 
+    /* baseタグ設定のため、パスをファイル名のみのシンプルな相対パスに戻します */
+    background-image: url('okayamauni.jpg'); 
     background-size: cover;
     background-position: center;
     display: flex;
