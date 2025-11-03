@@ -11,10 +11,10 @@ body {
 }
 
 /*=====================================
-  強調表示の解除
+  強調表示の完全解除
 =====================================*/
-strong, b {
-    font-weight: normal; /* HTMLで**や<b>で囲まれた部分の太字を解除 */
+strong, b, em {
+    font-weight: normal; /* HTMLで強調されているすべての太字を解除 */
 }
 
 /*=====================================
@@ -38,7 +38,8 @@ strong, b {
 .hero-title {
     font-size: 4em; 
     margin: 0;
-    font-weight: bold; 
+    /* 修正：太字を解除 */
+    font-weight: normal; 
     letter-spacing: 2px; 
     font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
 }
@@ -93,7 +94,8 @@ strong, b {
     top: 50%;
     transform: translateY(-50%);
     font-size: 14px;
-    font-weight: bold; /* デザイン維持のため太字のまま */
+    /* 修正：太字を解除 */
+    font-weight: normal; 
     color: #003366;
     background-color: #f9f9f9; /* 背景色で縦線を隠す */
     padding: 0 5px;
@@ -179,7 +181,8 @@ strong, b {
 .point-number {
     position: absolute;
     left: 0;
-    font-weight: bold; /* デザイン維持のため太字のまま */
+    /* 修正：太字を解除 */
+    font-weight: normal; 
     color: #003366;
     /* 【修正済み】widthとdisplayを追加し、見出しの表示領域を確保 */
     display: inline-block;
@@ -208,7 +211,8 @@ th, td {
 
 th {
     background-color: #f5f5f5;
-    font-weight: bold;
+    /* 修正：太字を解除 */
+    font-weight: normal;
     color: #333;
 }
 
