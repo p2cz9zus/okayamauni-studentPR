@@ -241,3 +241,90 @@ hr {
 .qa-item p {
     line-height: 1.8; 
 }
+
+/*=====================================
+  モバイル対応 (Max-width: 767px)
+=====================================*/
+@media (max-width: 767px) {
+    
+    /* 1. 全体設定 */
+    .content-wrapper {
+        /* 中央寄せを解除し、画面幅いっぱいに使う */
+        padding: 20px 15px;
+        /* スマホでは文字をやや小さく */
+        font-size: 15px; 
+    }
+
+    /* 2. ヒーローセクション */
+    .hero-section {
+        height: 30vh; /* 高さを低くする */
+    }
+    
+    .hero-title {
+        font-size: 2.5em; /* タイトル文字を縮小 */
+    }
+    
+    .hero-title .subtitle {
+        font-size: 0.5em; /* サブタイトルも適切に縮小 */
+    }
+
+    /* 3. 目次（ヘッダー）の非表示または整理 */
+    .header {
+        display: none; /* スマホでは目次ナビゲーションを非表示にする（コンテンツの邪魔になるため） */
+        /* または、画面上部に固定するなどの対策が必要ですが、今回はシンプルに非表示にします */
+    }
+    
+    /* 4. セクションタイトルの調整 */
+    .section-title-large {
+        flex-direction: column; /* 要素を縦に並べる */
+        align-items: flex-start; /* 左寄せ */
+        margin-bottom: 20px;
+    }
+    
+    .number-large {
+        font-size: 50px; /* 数字を縮小 */
+        margin-right: 0;
+    }
+    
+    .title-text {
+        border-top: none; /* PC版の区切り線を削除 */
+        padding-top: 0;
+    }
+    
+    .title-text h2 {
+        font-size: 24px; /* H2タイトルを縮小 */
+    }
+    
+    /* 5. リストの見出し（最も重要な修正） */
+    .list-styled li {
+        /* 左のスペースを解除し、見出しと本文の重なりを縦並びで解消 */
+        padding-left: 0; 
+        margin-bottom: 20px; 
+    }
+
+    .point-number {
+        position: static; /* absolute指定を解除し、通常の位置に戻す */
+        display: block; /* 見出しを必ず改行させる */
+        width: auto; /* 幅の制限を解除 */
+        text-align: left; /* 左寄せに戻す */
+        margin-bottom: 5px; /* 本文との間に少しスペースを空ける */
+        color: #000000; /* 目立たせるために色を濃くしても良い */
+    }
+    
+    /* 6. テーブル（表）の対応 */
+    .table-container {
+        /* スマホの小さな画面でも見やすいようにスクロール可能にする */
+        overflow-x: auto; 
+    }
+    
+    table {
+        /* 画面幅が狭い場合は、テーブルが親要素からはみ出ることを許容 */
+        min-width: 500px; 
+        width: auto; 
+    }
+
+    th, td {
+        padding: 8px 10px; /* パディングを狭くする */
+        font-size: 13px; /* 文字をさらに縮小 */
+    }
+}
