@@ -8,14 +8,38 @@ body {
     background-color: #f9f9f9; /* 背景色をわずかにグレーに */
 }
 
+/* ヒーローセクション（トップの背景画像とタイトル） */
+.hero-section {
+    width: 100%;
+    height: 60vh; /* ビューポートの高さの60% */
+    background-image: url('Okayamauni.jpg'); /* 添付画像のファイル名を反映 */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* テキストの色を白に */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* テキストの視認性を高める影 */
+    margin-bottom: 50px; /* その後のコンテンツとの間隔 */
+}
+
+.hero-title {
+    font-size: 4em; /* 大きなフォントサイズ */
+    margin: 0;
+    font-weight: bold; /* 既存の字体に合わせて太字に */
+    letter-spacing: 2px; /* 文字間隔を少し広げる */
+    font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+}
+
 /* ヘッダー/ナビゲーション（写真のレイアウトを再現） */
 .header {
     width: 250px; /* ナビゲーションの幅を確保 */
     padding: 30px 0;
     text-align: center;
-    position: absolute; /* 固定ナビゲーションを想定する場合は fixed */
-    top: 0;
+    position: absolute; /* 固定ナビゲーションを想定 */
+    top: 60vh; /* ヒーローセクションの下から開始 */
     left: 0;
+    /* 画面をスクロールしてもナビゲーションを固定する場合は position: fixed; を使用 */
 }
 
 .logo h1 {
@@ -64,6 +88,7 @@ body {
     margin-left: 250px; /* ナビゲーションの幅を空ける */
     padding: 40px 80px;
     max-width: 900px;
+    padding-top: calc(40px + 60vh); /* ヒーローセクションの高さを考慮して上部パディングを調整 */
 }
 
 /* セクションタイトル (01, 02 の大きな表示) */
@@ -106,8 +131,6 @@ body {
     color: #003366;
     margin-top: 0;
     position: relative;
-    /* 写真の丸いアイコンをCSSで再現する例 */
-    /* &::before { content: '◎'; } */
 }
 
 /* リスト形式の回答 */
