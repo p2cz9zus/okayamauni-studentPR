@@ -7,65 +7,46 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9; /* 背景色をわずかにグレーに */
+    background-color: #f9f9f9;
 }
 
 /*=====================================
-  ヒーローセクション（トップの背景画像とタイトル）
+  ヒーローセクション
 =====================================*/
 .hero-section {
     width: 100%;
-    height: 60vh; /* ビューポートの高さの60% */
-    /* 【最終決定版のパス】okayamauni.jpg ファイル名を指定。パスの先頭はリポジトリ名/ファイル名 */
-    background-image: url('/okayamauni-studentPR/okayamauni.jpeg?v=final_abs_v6'); 
-    background-size: cover; /* 画像をセクション全体に拡大・縮小 */
-    background-position: center; /* 画像を中央に配置 */
-    /* background-repeat: no-repeat;  ← 画像が一つだけ表示されることを確認するための設定（通常はデフォルト） */
-    
+    height: 60vh;
+    background-image: url('./okayamauni.jpeg');
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff; /* テキストの色を白に */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* テキストの視認性を高める影 */
-    margin-bottom: 0; 
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 0;
 }
 
 .hero-title {
-    font-size: 4em; 
+    font-size: 4em;
     margin: 0;
-    font-weight: bold; 
-    letter-spacing: 2px; 
-    font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 /*=====================================
-  ヘッダー/ナビゲーション（サイドバーのレイアウト）
+  中央ナビゲーション
 =====================================*/
-.header {
-    width: 250px; 
-    padding: 30px 0;
-    text-align: center;
-    position: absolute; 
-    top: 60vh; /* ヒーローセクションの下から開始 */
-    left: 0;
-}
-
-.logo h1 {
-    font-size: 24px;
-    margin: 5px 0 0;
-    color: #003366; 
-}
-
 .sidebar-nav {
-    margin-top: 50px;
+    margin: 40px auto;
+    text-align: center;
 }
 
 .sidebar-nav ol {
     list-style: none;
     padding: 0;
+    display: inline-block;
     text-align: left;
-    border-left: 2px solid #ccc; /* ナビゲーションの縦線を再現 */
-    margin-left: 50px;
 }
 
 .sidebar-nav li {
@@ -74,36 +55,23 @@ body {
 }
 
 .nav-number {
-    position: absolute;
-    left: -20px; 
-    top: 50%;
-    transform: translateY(-50%);
     font-size: 14px;
     font-weight: bold;
     color: #003366;
-    background-color: #f9f9f9; 
-    padding: 0 5px;
-}
-
-.sidebar-nav a {
-    text-decoration: none;
-    color: #555;
-    font-size: 14px;
+    margin-right: 5px;
 }
 
 /*=====================================
-  メインコンテンツエリア
+  メインコンテンツ
 =====================================*/
 .content-wrapper {
-    margin-left: 250px; /* ナビゲーションの幅を空ける */
     padding: 40px 80px;
     max-width: 900px;
-    /* ヒーローセクションの高さ(60vh)と、padding-topを合算して調整 */
-    padding-top: calc(40px + 60vh); 
+    margin: 0 auto;
+    padding-top: 40px;
 }
 
-/* セクションタイトル (01, 02 の大きな表示) */
-.section-title-large {
+/.section-title-large {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
@@ -111,7 +79,7 @@ body {
 
 .number-large {
     font-size: 80px;
-    color: #d8d8d8; /* 薄いグレーの大きな数字 */
+    color: #d8d8d8;
     font-weight: 100;
     margin-right: 20px;
     line-height: 1;
@@ -129,11 +97,10 @@ body {
     color: #555;
 }
 
-/* QAアイテムの共通スタイル */
 .qa-item {
     margin-bottom: 40px;
     padding-left: 30px;
-    border-left: 3px solid #003366; /* QAセクションの縦線を再現 */
+    border-left: 3px solid #003366;
     position: relative;
 }
 
@@ -144,19 +111,16 @@ body {
     position: relative;
 }
 
-/* リスト形式の回答 */
 .list-styled {
     list-style: none;
     padding: 0;
     margin-top: 15px;
 }
 
-/* リストアイテム全体に安全な行間を適用 */
 .list-styled li {
     margin-bottom: 15px;
     position: relative;
     padding-left: 25px;
-    line-height: 1.8; /* 行の高さを広げて文字の重なりを防ぐ */
 }
 
 .point-number {
@@ -166,7 +130,6 @@ body {
     color: #003366;
 }
 
-/* 表のスタイル */
 .table-container {
     margin-top: 20px;
 }
@@ -191,24 +154,17 @@ th {
     color: #333;
 }
 
-/* ノート/引用のスタイル */
 .note {
     margin: 30px 0;
     padding: 15px 20px;
-    background-color: #f0f4f7; /* 薄い青の背景 */
+    background-color: #f0f4f7;
     border-left: 5px solid #003366;
     font-size: 14px;
     color: #333;
 }
 
-/* 区切り線 */
 hr {
     border: 0;
     border-top: 1px solid #e0e0e0;
     margin: 50px 0;
-}
-
-/* QAアイテム内のテキスト全体に安全な行間を適用（文字の重なり対策） */
-.qa-item p {
-    line-height: 1.8; 
 }
