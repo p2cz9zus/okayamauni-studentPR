@@ -11,6 +11,13 @@ body {
 }
 
 /*=====================================
+  強調表示の解除
+=====================================*/
+strong, b {
+    font-weight: normal; /* HTMLで**や<b>で囲まれた部分の太字を解除 */
+}
+
+/*=====================================
   ヒーローセクション（トップの背景画像とタイトル）
 =====================================*/
 .hero-section {
@@ -86,7 +93,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     font-size: 14px;
-    font-weight: bold;
+    font-weight: bold; /* デザイン維持のため太字のまま */
     color: #003366;
     background-color: #f9f9f9; /* 背景色で縦線を隠す */
     padding: 0 5px;
@@ -172,7 +179,7 @@ body {
 .point-number {
     position: absolute;
     left: 0;
-    font-weight: bold;
+    font-weight: bold; /* デザイン維持のため太字のまま */
     color: #003366;
     /* 【修正済み】widthとdisplayを追加し、見出しの表示領域を確保 */
     display: inline-block;
