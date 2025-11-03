@@ -16,10 +16,8 @@ body {
 .hero-section {
     width: 100%;
     height: 60vh; /* ビューポートの高さの60% */
-    /* 【重要】GitHub Pages対応：リポジトリ名をパスに含める（絶対パス） 
-      ※リポジトリ名: Okayamauni-studentPR, 画像名: okayamauni.jpg と仮定
-    */
-    background-image: url('/Okayamauni-studentPR/okayamauni.jpg'); 
+    /* 【最終修正】画像パスをシンプルな相対パスに変更。これが最も確実です。 */
+    background-image: url('okayamauni.jpg'); 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -27,7 +25,7 @@ body {
     align-items: center;
     color: #fff; /* テキストの色を白に */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* テキストの視認性を高める影 */
-    margin-bottom: 0; /* ヘッダーとの隙間は後続のコンテンツで調整 */
+    margin-bottom: 0; 
 }
 
 .hero-title {
@@ -48,7 +46,6 @@ body {
     position: absolute; 
     top: 60vh; /* ヒーローセクションの下から開始 */
     left: 0;
-    /* position: fixed; にすると画面固定になりますが、デザインを維持するため absolute */
 }
 
 .logo h1 {
